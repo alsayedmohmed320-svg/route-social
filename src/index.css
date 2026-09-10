@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  color-scheme: light;
+}
+html.dark {
+  color-scheme: dark;
+}
+
+body {
+  @apply bg-ink-50 text-ink-800 font-sans antialiased transition-colors duration-200 dark:bg-ink-900 dark:text-ink-100;
+}
+
+/* شريط تمرير هادي بدل الديفولت */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: #dfe3e8;
+  border-radius: 999px;
+}
+.dark ::-webkit-scrollbar-thumb {
+  background: #383f48;
+}
+
+.skeleton {
+  @apply animate-pulse bg-ink-100 dark:bg-ink-800;
+}
