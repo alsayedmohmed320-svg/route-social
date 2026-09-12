@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script>
+    const path = window.location.pathname;
+    const repo = "/route-social";
+
+    if (path.startsWith(repo)) {
+      const route = path.slice(repo.length);
+      window.location.replace(
+        repo + "/?/" + route.replace(/^\//, "")
+      );
+    }
+  </script>
+</head>
+<body>
+</body>
+</html>
